@@ -1,0 +1,55 @@
+.employer {
+  padding: 60px 0 50px;
+}
+
+.employer__title {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.64px;
+  margin-bottom: 50px;
+}
+
+.employer__file {
+  margin-bottom: 32px;
+}
+
+.employer__fieldset {
+}
+.employer__wrap-input {
+}
+.employer__label {
+  display: block;
+}
+
+.employer__input {
+  border-radius: 4px;
+}
+
+.employer__input
+
+.employer__fieldset-input {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 20px;
+  margin-bottom: 32px;
+}
+
+.employer__fieldset-textarea {
+}
+.employer__textarea {
+}
+.employer__radio-buttons {
+}
+.employer__fieldset-radio {
+}
+.employer__legend {
+}
+.employer__label-radio {
+}
+
+.employer__wrap-submit {
+}
+.employer__submit {
+}
+.employer__error {
+}

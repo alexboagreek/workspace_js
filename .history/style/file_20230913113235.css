@@ -1,0 +1,19 @@
+.file {
+  position: relative;
+  display: flex;
+}
+
+.file__wrap-preview {
+  background-color: #fff;
+  min-width: 280px;
+  height: 80px;
+}
+
+.file__preview {
+}
+.file__wrap-btn {
+}
+.file__label {
+}
+.file__input {
+}
