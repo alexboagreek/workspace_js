@@ -1,0 +1,29 @@
+.radio {
+  position: relative;
+  display: block;
+  line-height: 20px;
+  padding-left: 28px;
+}
+.radio__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.radio__input:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  transition: op;
+
+}
