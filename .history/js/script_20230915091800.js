@@ -434,7 +434,7 @@ const init = () => {
           window.location.href = 'index.html';
         }
       } catch (error) {
-        employerError.textContent = 'Произошла ошибка...'
+        document.querySelector('.employer__error').textContent = 'Произошла ошибка...'
         console.error(error);
       }
       });

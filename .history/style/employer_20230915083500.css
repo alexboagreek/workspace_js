@@ -51,12 +51,14 @@
   border: 1px solid transparent;
 }
 
-.employer__input.invalid,
+
+
+
+.employer__input.invalid, 
 .employer__textarea.invalid {
   border-color: #f00;
 }
-
-.employer__input:focus-visible,
+.employer__input:focus-visible, 
 .employer__textarea:focus-visible {
   border-color: #a6adff;
 }
@@ -165,7 +167,7 @@
   }
 
   .employer__fieldset-input {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1,1fr);
   }
 
   .employer__radio-buttons {

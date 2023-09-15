@@ -1,4 +1,4 @@
-const API_URL = "https://diamond-phantom-stocking.glitch.me/";
+const API_URL = "https://workspace-methed.vercel.app/";
 const LOCATION_URL = "api/locations";
 const VACANCY_URL = "api/vacancy";
 
@@ -308,15 +308,7 @@ const init = () => {
   try {
     const validationForm = (form) => {
       const validate = new JustValidate(form, {
-        errorLabelStyle: {
-          color: '#f00',
-        },
-
-        errorFieldStyle: {
-          borderColor: '#f00',
-        },
-        errorFieldCssClass: 'invalid',
-
+        уккщк
         errorsContainer: document.querySelector('.employer__error')
       });
 
@@ -357,7 +349,6 @@ const init = () => {
           rule: "required", 
           errorMessage: "Заполните размер вознаграждения" 
         },
-        
       ])
       .addField('#location', [
         { 
@@ -370,10 +361,6 @@ const init = () => {
           rule: "required", 
           errorMessage: "Заполните название почты" 
         },
-        {
-          rule: 'email',
-          errorMessage: 'Ввведите правильный адрес почты'
-        }
       ])
       .addField('#description', [
         { 
@@ -384,10 +371,7 @@ const init = () => {
       .addRequiredGroup('#format', 'Выберите формат' )
       .addRequiredGroup('#experience', 'Выберите опыт')
       .addRequiredGroup('#type', 'Выберите занятость');
-
-      return validate;
     };
-
 
     const fileController = () => {
       const file = document.querySelector(".file");
@@ -412,31 +396,10 @@ const init = () => {
     const formController = () => {
       const form = document.querySelector(".employer__form");
 
-      const validate = validationForm(form);
-      const employerError = document.querySelector('.employer__error');
+      validationForm(form);
 
-      form.addEventListener("submit", async (event) => {
+      form.addEventListener("submit", (event) => {
         event.preventDefault();
-
-        if (!validate.isValid) {
-          return;
-        }
-        try {
-        const formData = new FormData(form);
-        employerError.textContent = 'Отправка, немного подождите...'
-        const response = await fetch(`${API_URL}${VACANCY_URL}`, {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (response.ok) {
-          employerError.textContent = 'Отправка, подождите...'
-          window.location.href = 'index.html';
-        }
-      } catch (error) {
-        employerError.textContent = 'Произошла ошибка...'
-        console.error(error);
-      }
       });
     };
 

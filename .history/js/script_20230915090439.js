@@ -413,30 +413,15 @@ const init = () => {
       const form = document.querySelector(".employer__form");
 
       const validate = validationForm(form);
-      const employerError = document.querySelector('.employer__error');
 
-      form.addEventListener("submit", async (event) => {
+      form.addEventListener("submit", (event) => {
         event.preventDefault();
 
         if (!validate.isValid) {
           return;
         }
-        try {
-        const formData = new FormData(form);
-        employerError.textContent = 'Отправка, немного подождите...'
-        const response = await fetch(`${API_URL}${VACANCY_URL}`, {
-          method: 'POST',
-          body: formData,
-        });
 
-        if (response.ok) {
-          employerError.textContent = 'Отправка, подождите...'
-          window.location.href = 'index.html';
-        }
-      } catch (error) {
-        employerError.textContent = 'Произошла ошибка...'
-        console.error(error);
-      }
+        const 
       });
     };
 

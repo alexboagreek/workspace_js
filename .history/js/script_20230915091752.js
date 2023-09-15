@@ -430,11 +430,11 @@ const init = () => {
         });
 
         if (response.ok) {
-          employerError.textContent = 'Отправка, подождите...'
+          document.querySelector('.employer__error').textContent = 'Отправка, подождите...'
           window.location.href = 'index.html';
         }
       } catch (error) {
-        employerError.textContent = 'Произошла ошибка...'
+        document.querySelector('.employer__error').textContent = 'Произошла ошибка...'
         console.error(error);
       }
       });
